@@ -1,0 +1,706 @@
+POST http://localhost:8080/api/bases
+Content-Type: application/json
+
+{
+    "name": "Alpha Base",
+    "location": "Bangalore",
+    "code": "AB001"
+}
+
+###
+
+GET http://localhost:8080/api/bases
+
+
+###
+
+DELETE http://localhost:8080/api/bases/5
+
+###
+
+POST http://localhost:8080/api/equipment
+Content-Type: application/json
+
+{
+    "name": "Military Truck",
+    "type": "Vehicle",
+    "code": "TRK001",
+    "quantity": 10
+}
+
+###
+
+GET http://localhost:8080/api/equipment
+
+###
+
+DELETE http://localhost:8080/api/equipment/1
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+
+POST http://localhost:8080/api/bases
+Content-Type: application/json
+
+{
+    "name": "Alpha Base",
+    "location": "Bangalore",
+    "code": "AB001"
+}
+
+###
+
+POST http://localhost:8080/api/equipment
+Content-Type: application/json
+
+{
+    "name": "Military Truck",
+    "type": "Vehicle",
+    "code": "TRK001",
+    "quantity": 10,
+    "baseId": 6
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+
+POST http://localhost:8080/api/purchases
+Content-Type: application/json
+
+{
+    "baseId": 6,
+    "equipmentId": 2,
+    "quantity": 5,
+    "purchaseDate": "2026-09-28"
+}
+
+###
+
+GET http://localhost:8080/api/purchases
+
+
+###
+POST http://localhost:8080/api/purchases
+Content-Type: application/json
+
+{
+    "baseId": 6,
+    "equipmentId": 2,
+    "quantity": 5,
+    "purchaseDate": "2026-09-28"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+
+POST http://localhost:8080/api/bases
+Content-Type: application/json
+
+{
+    "name": "Bravo Base",
+    "location": "Mysore",
+    "code": "BB001"
+}
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 6,
+    "toBaseId": 7,
+    "quantity": 5,
+    "transferDate": "2026-09-28"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 6,
+    "toBaseId": 7,
+    "quantity": 5,
+    "transferDate": "2026-09-28"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+GET http://localhost:8080/api/transfers
+
+###
+POST http://localhost:8080/api/assignments
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "personnelName": "John Kumar",
+    "quantity": 2,
+    "assignmentDate": "2026-09-29"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+POST http://localhost:8080/api/assignments
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "personnelName": "Rahul Sharma",
+    "quantity": 1,
+    "assignmentDate": "2026-09-29"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+POST http://localhost:8080/api/expenditures
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "quantity": 1,
+    "expenditureDate": "2026-09-29",
+    "reason": "Operational use"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+POST http://localhost:8080/api/expenditures
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "quantity": 1,
+    "expenditureDate": "2026-09-29",
+    "reason": "Training exercise"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+GET http://localhost:8080/api/dashboard
+
+###
+GET http://localhost:8080/api/dashboard
+
+###
+GET http://localhost:8080/api/dashboard
+
+###
+GET http://localhost:8080/api/dashboard
+
+###
+GET http://localhost:8080/api/dashboard
+
+###
+
+GET http://localhost:8080/api/dashboard
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=6
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=6
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=6
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=6
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=7
+
+###
+
+GET http://localhost:8080/api/equipment
+
+###
+
+PUT http://localhost:8080/api/equipment/2/opening-balance
+Content-Type: application/json
+
+15
+
+###
+
+PUT http://localhost:8080/api/equipment/3/opening-balance
+Content-Type: application/json
+
+5
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=6
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=7
+
+###
+
+GET http://localhost:8080/api/
+
+###
+
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 6,
+    "toBaseId": 7,
+    "quantity": 1,
+    "transferDate": "2026-09-29"
+}
+
+###
+
+GET http://localhost:8080/api/equipment
+
+###
+
+POST http://localhost:8080/api/purchases
+Content-Type: application/json
+
+{
+    "baseId": 6,
+    "equipmentId": 2,
+    "quantity": 2,
+    "purchaseDate": "2026-09-29"
+}
+
+###
+
+GET http://localhost:8080/api/equipment
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=6
+
+###
+
+GET http://localhost:8080/api/dashboard?baseId=7
+
+###
+
+GET http://localhost:8080/api/purchases
+
+###
+
+POST http://localhost:8080/api/purchases
+Content-Type: application/json
+
+{
+    "baseId": 7,
+    "equipmentId": 2,
+    "quantity": 1,
+    "purchaseDate": "2026-09-29"
+}
+
+###
+
+GET http://localhost:8080/api/purchases
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 7,
+    "toBaseId": 6,
+    "quantity": 1,
+    "transferDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 7,
+    "toBaseId": 6,
+    "quantity": 1,
+    "transferDate": "2026-09-29"
+}
+
+###
+GET http://localhost:8080/api/transfers
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 6,
+    "toBaseId": 7,
+    "quantity": 0,
+    "transferDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 6,
+    "toBaseId": 6,
+    "quantity": 1,
+    "transferDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 6,
+    "toBaseId": 7,
+    "quantity": 1,
+    "transferDate": "2026-09-29"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+GET http://localhost:8080/api/purchases
+
+###
+GET http://localhost:8080/api/assignments
+
+###
+GET http://localhost:8080/api/expenditures
+
+###
+POST http://localhost:8080/api/expenditures
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "quantity": 1,
+    "expenditureDate": "2026-09-29",
+    "reason": "Testing expenditure"
+}
+
+###
+GET http://localhost:8080/api/equipment
+
+###
+GET http://localhost:8080/api/dashboard
+
+###
+GET http://localhost:8080/api/dashboard?baseId=6
+
+###
+GET http://localhost:8080/api/dashboard?baseId=7
+
+###
+GET http://localhost:8080/api/dashboard?equipmentType=Vehicle
+
+###
+GET http://localhost:8080/api/dashboard?equipmentType=Weapon
+
+###
+GET http://localhost:8080/api/dashboard?baseId=6&equipmentType=Vehicle
+
+###
+GET http://localhost:8080/api/dashboard?startDate=2026-09-29&endDate=2026-09-29
+
+###
+GET http://localhost:8080/api/dashboard?startDate=2026-09-01&endDate=2026-09-01
+
+###
+POST http://localhost:8080/api/assignments
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "personnelName": "Test User",
+    "quantity": 0,
+    "assignmentDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/assignments
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 6,
+    "personnelName": "Test User",
+    "quantity": 1,
+    "assignmentDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/expenditures
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "quantity": 0,
+    "expenditureDate": "2026-09-29",
+    "reason": "Test validation"
+}
+
+###
+POST http://localhost:8080/api/expenditures
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 6,
+    "quantity": 1,
+    "expenditureDate": "2026-09-29",
+    "reason": "Test validation"
+}
+
+###
+POST http://localhost:8080/api/purchases
+Content-Type: application/json
+
+{
+    "baseId": 6,
+    "equipmentId": 2,
+    "quantity": 0,
+    "purchaseDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/purchases
+Content-Type: application/json
+
+{
+    "baseId": 7,
+    "equipmentId": 2,
+    "quantity": 1,
+    "purchaseDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/purchases
+Content-Type: application/json
+
+{
+    "baseId": 6,
+    "equipmentId": 2,
+    "quantity": 0,
+    "purchaseDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 6,
+    "toBaseId": 7,
+    "quantity": 0,
+    "transferDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/assignments
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "personnelName": "Test Person",
+    "quantity": 0,
+    "assignmentDate": "2026-09-29"
+}
+
+###
+POST http://localhost:8080/api/expenditures
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "quantity": 0,
+    "expenditureDate": "2026-09-29",
+    "reason": "Test"
+}
+
+###
+GET http://localhost:8080/api/audit-logs
+
+###
+POST http://localhost:8080/api/purchases
+Content-Type: application/json
+
+{
+    "baseId": 6,
+    "equipmentId": 2,
+    "quantity": 1,
+    "purchaseDate": "2026-09-29"
+}
+
+###
+GET http://localhost:8080/api/audit-logs
+
+###
+POST http://localhost:8080/api/transfers
+Content-Type: application/json
+
+{
+    "equipmentId": 2,
+    "fromBaseId": 6,
+    "toBaseId": 7,
+    "quantity": 1,
+    "transferDate": "2026-09-29"
+}
+
+###
+GET http://localhost:8080/api/audit-logs
+
+###
+POST http://localhost:8080/api/assignments
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "personnelName": "Audit Test Person",
+    "quantity": 1,
+    "assignmentDate": "2026-09-29"
+}
+
+###
+GET http://localhost:8080/api/audit-logs
+
+###
+POST http://localhost:8080/api/expenditures
+Content-Type: application/json
+
+{
+    "equipmentId": 3,
+    "baseId": 7,
+    "quantity": 1,
+    "expenditureDate": "2026-09-29",
+    "reason": "Audit test"
+}
+
+###
+GET http://localhost:8080/api/audit-logs
+
+###
+GET http://localhost:8080/api/users
+
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin123",
+    "role": "ADMIN",
+    "baseId": null
+}
+
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "username": "admin2",
+    "password": "admin123",
+    "role": "ADMIN",
+    "baseId": null
+}
+
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "username": "commander",
+    "password": "commander123",
+    "role": "BASE_COMMANDER",
+    "baseId": 6
+}
+
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+    "username": "logistics",
+    "password": "logistics123",
+    "role": "LOGISTICS_OFFICER",
+    "baseId": 6
+}
+
+###
+GET http://localhost:8080/api/users
+
+###
+GET http://localhost:8080/api/users
+
+###
+GET http://localhost:8080/api/users
+
+###
+GET http://localhost:8080/api/users
+Authorization: Basic YWRtaW4yOmFkbWluMTIz
+
+###
+GET http://localhost:8080/api/users
+Authorization: Basic Y29tbWFuZGVyOmNvbW1hbmRlcjEyMw==
+
+###
+GET http://localhost:8080/api/purchases
+Authorization: Basic bG9naXN0aWNzOmxvZ2lzdGljczEyMw==
+
+###
+GET http://localhost:8080/api/assignments
+Authorization: Basic bG9naXN0aWNzOmxvZ2lzdGljczEyMw==
